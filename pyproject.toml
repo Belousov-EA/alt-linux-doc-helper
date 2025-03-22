@@ -1,0 +1,11 @@
+[project]
+name = "alt-linux-doc-helper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter>=1.1.1",
+    "langgraph>=0.3.18",
+    "ollama>=0.4.7",
+]
