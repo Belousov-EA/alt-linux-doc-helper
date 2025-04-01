@@ -9,4 +9,5 @@ dependencies = [
     "langchain-ollama>=0.3.0",
     "langgraph>=0.3.18",
     "ollama>=0.4.7",
+    "streamlit>=1.44.1",
 ]
