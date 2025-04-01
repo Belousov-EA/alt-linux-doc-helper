@@ -9,3 +9,9 @@ src/utils/yaml_reader - чтение yaml документов
 Предполагается написание кода в src в .py файлах, затем вызов этого кода в jupyter notebooks
 
 Прямые коммиты в main запрещены
+
+
+Запуск графирческого интерфейса streamlit:
+```bash
+uv run streamlit run src/app/linux_helper.py
+```
