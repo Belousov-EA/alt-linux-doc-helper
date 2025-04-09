@@ -10,4 +10,10 @@ dependencies = [
     "langgraph>=0.3.18",
     "ollama>=0.4.7",
     "streamlit>=1.44.1",
+    "torch==2.6.0",
+    "torchaudio==2.6.0",
+    "torchvision==0.21.0",
+    "qdrant_client",
+    "tqdm",
+    "transformers",
 ]

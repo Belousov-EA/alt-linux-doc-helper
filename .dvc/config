@@ -1,0 +1,6 @@
+[core]
+    remote = dvc
+    autostage = true
+['remote "dvc"']
+    url = s3://dvc/
+    endpointurl = http://associates-meters.gl.at.ply.gg:9582
