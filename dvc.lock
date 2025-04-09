@@ -1,0 +1,39 @@
+schema: '2.0'
+stages:
+  configure:
+    cmd: uv run src/indexing/choice_json_gen.py
+    deps:
+    - path: src/indexing/choice_json_gen.py
+      hash: md5
+      md5: ca96ae0da227eda98f1337e5b895b494
+      size: 2805
+    outs:
+    - path: generated_configs/possible_choices.json
+      hash: md5
+      md5: a466217ba2d8dc2c1ee7640f37344a3c
+      size: 12427
+    - path: generated_configs/your_choice.json
+      hash: md5
+      md5: 0ee46e8b2c54613919a9f672df858573
+      size: 110
+  index:
+    cmd: uv run src/indexing/choice_user_to_qdrant.py
+    deps:
+    - path: generated_configs/possible_choices.json
+      hash: md5
+      md5: a466217ba2d8dc2c1ee7640f37344a3c
+      size: 12427
+    - path: generated_configs/your_choice.json
+      hash: md5
+      md5: 371e39669eb6a550dfee2b0f4e28906d
+      size: 74
+    - path: src/indexing/choice_user_to_qdrant.py
+      hash: md5
+      md5: 4582e159bc2aded92e9fa859b786f9cd
+      size: 9737
+    outs:
+    - path: db/
+      hash: md5
+      md5: 02d59975d05024101f7d1b4328add53d.dir
+      size: 10818287
+      nfiles: 3

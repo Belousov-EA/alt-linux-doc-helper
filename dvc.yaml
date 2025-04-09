@@ -1,0 +1,15 @@
+stages:
+  configure:
+    cmd: uv run src/indexing/choice_json_gen.py
+    deps:
+    - src/indexing/choice_json_gen.py
+    outs:
+    - generated_configs/possible_choices.json
+  index:
+    cmd: uv run src/indexing/choice_user_to_qdrant.py
+    deps:
+    - generated_configs/possible_choices.json
+    - generated_configs/your_choice.json
+    - src/indexing/choice_user_to_qdrant.py
+    outs:
+    - db/

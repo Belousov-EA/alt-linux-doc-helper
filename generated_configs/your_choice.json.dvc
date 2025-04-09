@@ -1,0 +1,5 @@
+outs:
+- md5: 371e39669eb6a550dfee2b0f4e28906d
+  size: 74
+  hash: md5
+  path: your_choice.json
